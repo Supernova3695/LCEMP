@@ -834,9 +834,11 @@ bool VillagePieces::SmallTemple::postProcess(Level *level, Random *random, Bound
 	generateBox(level, chunkBB, 1, 5, 1, 3, 9, 3, 0, 0, false);
 
 	// floor
+	// 3x8 platform offset by one block inwards if i had to guess based off images of the church
 	generateBox(level, chunkBB, 1, 0, 0, 3, 0, 8, Tile::stoneBrick_Id, Tile::stoneBrick_Id, false);
 
-	// front wall
+	// front wall 
+	// first three numbers seem to be the offset and the final three seem to be the actual piece size.
 	generateBox(level, chunkBB, 1, 1, 0, 3, 10, 0, Tile::stoneBrick_Id, Tile::stoneBrick_Id, false);
 	// left tall wall
 	generateBox(level, chunkBB, 0, 1, 1, 0, 10, 3, Tile::stoneBrick_Id, Tile::stoneBrick_Id, false);
